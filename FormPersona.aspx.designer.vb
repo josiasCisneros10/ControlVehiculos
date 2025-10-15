@@ -32,31 +32,58 @@ Partial Public Class FormPersona
     Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtApellido control.
+    '''txtApellido1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtApellido As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtApellido1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtEdad control.
+    '''TxtApellido2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtEdad As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TxtApellido2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnMostrar control.
+    '''txtNacionalidad control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnMostrar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents txtNacionalidad As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtFechanac control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtFechanac As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtTelefono control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''btnGuardar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''btnActualizar control.
@@ -77,15 +104,6 @@ Partial Public Class FormPersona
     Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''gvPersonas control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents gvPersonas As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
     '''SqlDataSource1 control.
     '''</summary>
     '''<remarks>
@@ -93,4 +111,13 @@ Partial Public Class FormPersona
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''gvPersonas control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gvPersonas As Global.System.Web.UI.WebControls.GridView
 End Class

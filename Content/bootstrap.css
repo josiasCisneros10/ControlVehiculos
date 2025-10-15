@@ -1748,12 +1748,10 @@ progress {
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
   --bs-table-hover-color: var(--bs-body-color);
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
-  width: 100%;
   margin-bottom: 1rem;
   color: var(--bs-table-color);
   vertical-align: top;
-  border-color: var(--bs-table-border-color);
-}
+  }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: var(--bs-table-bg);

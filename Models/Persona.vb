@@ -4,14 +4,14 @@
     Private _nombre As String
     Private _apellido1 As String
     Private _apellido2 As String
-    Private _nacionalidad As Integer
+    Private _nacionalidad As String
     Private _fechaNacimiento As Date
     Private _telefono As String
 
     Public Sub New()
     End Sub
 
-    Public Sub New(idPersona As Integer, nombre As String, apellido1 As String, apellido2 As String, nacionalidad As Integer, fechaNacimiento As Date, telefono As String)
+    Public Sub New(idPersona As Integer, nombre As String, apellido1 As String, apellido2 As String, nacionalidad As String, fechaNacimiento As Date, telefono As String)
         Me.IdPersona = idPersona
         Me.Nombre = nombre
         Me.Apellido1 = apellido1
@@ -56,11 +56,11 @@
         End Set
     End Property
 
-    Public Property Nacionalidad As Integer
+    Public Property Nacionalidad As String
         Get
             Return _nacionalidad
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _nacionalidad = value
         End Set
     End Property
@@ -82,6 +82,4 @@
             _telefono = value
         End Set
     End Property
-
-
 End Class
