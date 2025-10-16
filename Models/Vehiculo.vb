@@ -2,11 +2,14 @@
     Private _idVehiculo As Integer
     Private _marca As String
     Private _modelo As String
-    Private _anio As Integer
-    Private _color As Integer
-    Private _placa As Integer
+    Private _anio As String
+    Private _color As String
+    Private _placa As String
 
-    Public Sub New(idVehiculo As Integer, marca As String, modelo As String, anio As Integer, color As Integer, placa As Integer)
+    Public Sub New()
+    End Sub
+
+    Public Sub New(idVehiculo As Integer, marca As String, modelo As String, anio As String, color As String, placa As String)
         Me.IdVehiculo = idVehiculo
         Me.Marca = marca
         Me.Modelo = modelo
@@ -42,29 +45,29 @@
         End Set
     End Property
 
-    Public Property Anio As Integer
+    Public Property Anio As String
         Get
             Return _anio
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _anio = value
         End Set
     End Property
 
-    Public Property Color As Integer
+    Public Property Color As String
         Get
             Return _color
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _color = value
         End Set
     End Property
 
-    Public Property Placa As Integer
+    Public Property Placa As String
         Get
             Return _placa
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _placa = value
         End Set
     End Property
