@@ -1,7 +1,10 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Security.Cryptography
 
 Public Class dbPersona
     Private ReadOnly connectionString As String = ConfigurationManager.ConnectionStrings("II-46ConnectionString").ConnectionString
+    Dim dbHelper = New DbHelper() ' Clase para manejar conexiones y consultas
+
     Public Function create(Persona As Persona) As Boolean
         Try
             Dim sql As String = "INSERT INTO Personas (Nombre, Apellido1, Apellido2, Nacionalidad, FechaNacimiento, Telefono) VALUES (@Nombre, @Apellido1, @Apellido2, @Nacionalidad, @FechaNacimiento, @Telefono)"
@@ -13,6 +16,7 @@ Public Class dbPersona
             New SqlParameter("@FechaNacimiento", Persona.FechaNacimiento),
             New SqlParameter("@Telefono", Persona.Telefono)
         }
+            dbHelper.ExecuteNonQuery(sql, Parametros)
 
             Using connetion As New SqlConnection(connectionString)
                 Using command As New SqlCommand(sql, connetion)
