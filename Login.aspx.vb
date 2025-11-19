@@ -1,6 +1,7 @@
-﻿Imports ControlVehiculos.Utils
+﻿Imports System.Data.SqlClient
+Imports ControlVehiculos.Utils
 
-Public Class WebForm1
+Public Class Login
     Inherits System.Web.UI.Page
     Protected dbHelper As New dbLogin()
 
@@ -8,7 +9,7 @@ Public Class WebForm1
 
     End Sub
 
-    Protected Sub btnIniciarSesion_Click1(sender As Object, e As EventArgs)
+    Protected Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
         Dim Usuario As String = txtUsuario.Text
         Dim Password As String = txtPassword.Text
         Dim encrypter As New Simple3Des("MiClaveSecreta123") ' Clave de encriptación
@@ -28,5 +29,6 @@ Public Class WebForm1
             ' Credenciales incorrectas
             SwalUtils.ShowSwalError(Me, "Error de inicio de sesión", "Credenciales incorrectas.")
         End If
+
     End Sub
 End Class

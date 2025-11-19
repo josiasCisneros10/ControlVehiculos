@@ -6,9 +6,9 @@ Public Class dbLogin
         Try
             Dim sql As String = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @Usuario AND Contrasena = @Password AND Activo = 1"
             Dim Parametros As New List(Of SqlParameter) From {
-                New SqlParameter("@Usuario", usuario),
-                New SqlParameter("@Password", password)
-            }
+            New SqlParameter("@Usuario", usuario),
+            New SqlParameter("@Password", password)
+        }
             Dim dt As DataTable = dbHelper.ExecuteQuery(sql, Parametros)
             If dt.Rows.Count > 0 AndAlso Convert.ToInt32(dt.Rows(0)(0)) > 0 Then
                 Return True
@@ -23,13 +23,13 @@ Public Class dbLogin
     Public Function RegisterUser(ByRef usuario As Usuario) As String
         Try
             Dim sql As String = "INSERT INTO Usuarios ([NombreUsuario]
-           ,[Contrasena]
-           ,[Email]) VALUES (@Usuario, @Password, @email)"
+       ,[Contrasena]
+       ,[Email]) VALUES (@Usuario, @Password, @email)"
             Dim Parametros As New List(Of SqlParameter) From {
-                New SqlParameter("@Usuario", usuario.NombreUsuario),
-                New SqlParameter("@Password", usuario.Contrasena),
-                New SqlParameter("@email", usuario.Email)
-            }
+            New SqlParameter("@Usuario", usuario.NombreUsuario),
+            New SqlParameter("@Password", usuario.Contrasena),
+            New SqlParameter("@email", usuario.Email)
+        }
             dbHelper.ExecuteNonQuery(sql, Parametros)
         Catch ex As Exception
             Return "Error al registrar el usuario: " & ex.Message
@@ -40,8 +40,8 @@ Public Class dbLogin
     Public Function GetUser(usuario As String) As Object
         Dim sql As String = "SELECT IdUsuario, NombreUsuario, Rol, Email FROM Usuarios WHERE NombreUsuario = @Usuario"
         Dim Parametros As New List(Of SqlParameter) From {
-            New SqlParameter("@Usuario", usuario)
-        }
+        New SqlParameter("@Usuario", usuario)
+    }
         Dim dt As DataTable = dbHelper.ExecuteQuery(sql, Parametros) ' Ejecutar la consulta y obtener el DataTable
         Dim UsuarioObj As New Usuario()
         If dt.Rows.Count > 0 Then ' Verificar si se encontró el usuario

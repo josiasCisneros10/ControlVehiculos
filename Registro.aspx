@@ -22,7 +22,7 @@
 
     <div class="form-group">
         <asp:Label ID="lblConfirmarPassword" runat="server" Text="Confirmar Contraseña:"></asp:Label>
-        <asp:TextBox ID="txtConfirmarPassword" runat="server" CssClass="form-control"></asp:TextBox>
+        <asp:TextBox ID="txtConfirmarPassword" runat="server" CssClass="form-control" TextMode ="Password"></asp:TextBox>
     </div>
 
     <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" CssClass="btn btn-success mt-2" />
